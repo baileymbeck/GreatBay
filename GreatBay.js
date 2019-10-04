@@ -12,7 +12,7 @@ var connection = mysql.createConnection({
   
     // Your password
     password: process.env.DB_PASSWORD,
-    database: "ice_creamDB"
+    database: "greatbay_db"
   });
   
 
