@@ -1,0 +1,23 @@
+{
+  "name": "GreatBay",
+  "version": "1.0.0",
+  "description": "Basic bid app using mySQL",
+  "main": "GreatBay.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baileymbeck/GreatBay.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baileymbeck/GreatBay/issues"
+  },
+  "homepage": "https://github.com/baileymbeck/GreatBay#readme",
+  "dependencies": {
+    "mysql": "^2.17.1"
+  }
+}
