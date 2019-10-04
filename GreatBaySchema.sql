@@ -10,3 +10,4 @@ CREATE TABLE greatbay (
     category VARCHAR (50) NOT NULL,
     bid INT (12) NOT NULL DEFAULT 0
 );
+
