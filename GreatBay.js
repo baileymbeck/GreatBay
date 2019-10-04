@@ -72,7 +72,12 @@ function getItems(inquirer) {
 
 function bidOnItem(item, bidAmount, makeBid, inquirer) {
     // SELECT bid FROM greatbay WHERE item = "record";
-    bid = 0;
+    var bid;
+    connection.query("SELECT bid FROM greatbay WHERE item = ?", [item], function(err, res) {
+      if (err) throw err;
+      bid = res[0].bid;
+      console.log(bid);
+    })
 
 
     if (bidAmount > bid) {
@@ -81,10 +86,11 @@ function bidOnItem(item, bidAmount, makeBid, inquirer) {
         // Bid is too low
         console.log("Bid higher.")
         inquirer();
+    
     }
-
    
 }
+
 
 /* 
 function updateProduct() {
@@ -108,8 +114,11 @@ function updateProduct() {
   );
 */
 
-
 function makeBid(item, bidAmount, inquirer) {
+  connection.query("UPDATE greatbay SET bid = ? WHERE item = ?", [{bid:bidAmount},{item:item}], function(err, res){
+    if (err) throw err;
+    console.log(res);
+  })
 
     // UPDATE greatbay 
     // SET bid = 5
@@ -118,3 +127,4 @@ function makeBid(item, bidAmount, inquirer) {
 
     inquirer();
 }
+
