@@ -6,3 +6,5 @@ SELECT item FROM greatbay;
 UPDATE greatbay 
 SET bid = 5
 WHERE item = "record";
+
+SELECT bid FROM greatbay WHERE item = "record";
