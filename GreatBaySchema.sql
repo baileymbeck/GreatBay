@@ -8,5 +8,5 @@ CREATE TABLE greatbay (
     id INT (10) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     item VARCHAR (48) NOT NULL,
     category VARCHAR (50) NOT NULL,
-    bid INT (12) NOT NULL;
+    bid INT (12) NOT NULL DEFAULT 0;
 )
